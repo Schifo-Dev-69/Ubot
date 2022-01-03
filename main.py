@@ -22,3 +22,4 @@ async def info(event):
              elif x.sender.bot == False:
                 is_bot = "✖"
              await event.edit(f"INFORMAZIONI SULL'UTENTE\nNome: {x.sender.first_name}\nID: » <code>{x.sender.id}</code>\nBot: {is_bot}\nUsername: {x.sender.username}\nDC: {x.sender.photo.dc_id}",parse_mode="html")
+             lol
