@@ -1,25 +1,9 @@
-from telethon.sync import TelegramClient, events
-from telethon import TelegramClient
-from telethon.sessions import StringSession
 from telethon import TelegramClient
 
+# Use your own values from my.telegram.org
+api_id = 12345
+api_hash = '0123456789abcdef0123456789abcdef'
 
-api_id = 
-api_hash = ''
-client = TelegramClient(StringSession(''), api_id, api_hash)
-string = ''
-print("Avvio userbot...")
-client.start()
-print("Userbot avviato!")
-client.run_until_disconnected()
-
-@client.on(events.NewMessage(outgoing=True))
-async def info(event):
-     x = await event.get_reply_message()
-     if event.text == ".info":
-             if x.sender.bot == True:
-                is_bot = "✔"
-             elif x.sender.bot == False:
-                is_bot = "✖"
-             await event.edit(f"INFORMAZIONI SULL'UTENTE\nNome: {x.sender.first_name}\nID: » <code>{x.sender.id}</code>\nBot: {is_bot}\nUsername: {x.sender.username}\nDC: {x.sender.photo.dc_id}",parse_mode="html")
-             lol
+# The first parameter is the .session file name (absolute paths allowed)
+with TelegramClient('anon', api_id, api_hash) as client:
+    client.loop.run_until_complete(client.send_message('me', 'Hello, myself!'))
