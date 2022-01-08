@@ -17,12 +17,12 @@ async def info(client: Client, message: Message):
 
     
 @app.on_message(filters.command("lol",".") & filters.me)
-async def info(client: Client, message: Message):
+async def lol(client: Client, message: Message):
     await message.username("Il ridere , la burla , il meme , il kek , il divertimento , la goliardia , la ridaranza , la risata fragorosa , la battuta goliardica , la burla italiana , lo scherzo all'italiana , l'ilarità,  lo scherzo goliardico , la risata a crepapelle , la letizia , il funesto intrattenimento del ridere , il manifestarsi di un sentimento di allegrezza mediante modificazione del ritmo reapiratorio e variazione della mimica facciale anche denominato divertimento , la situazione usuale alla quale ognuno di noi ha assistito almeno una volta nella propria vita descritta tramite immagini e scritte , il ridere , la comicità , la fumettistica , il simpatismo , la risacca , il funny , lo spasso , il buffo , la farsa , la beffa , la burla , il divertimento , la pagliaccieria , l'azione giullaresca.")
 
 
 @app.on_message(filters.command("a",".") & filters.me)
-async def info(client: Client, message: Message):
+async def a(client: Client, message: Message):
     await message.username("ᵃ")
 
 
@@ -32,7 +32,7 @@ async def hi(client: Client, message: Message):
 
 
 @app.on_message(filters.command("stop", ".") & filters.me)
-async def stoppa(client: Client, message: Message):
+async def stop(client: Client, message: Message):
    await message.reply_text("Userbot **stopped** as succesfull!")
    sys.exit()
 
