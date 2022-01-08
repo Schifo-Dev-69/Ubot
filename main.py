@@ -16,5 +16,23 @@ async def info(client,message):
 @app.on_message(filters.command("a","."))
 async def info(client,message):
     await message.edit("ᵃ")
+    
+    
 
+@app.on_message(filters.command("hi", "."))
+async def hi(Client, message):
+
+   await app.send_message(message.chat.id, "hi")
+
+@app.on_message(filters.command("stop", "."))
+async def stoppa(Client, message):
+
+   await app.send_message(message.chat.id, "Userbot **stopped** as succesfull!")
+   sys.exit()
+
+@app.on_message(filters.command("a","."))
+async def info(client,message):
+    await message.edit("a")
+    time.sleep(0.5)
 app.run()
+
